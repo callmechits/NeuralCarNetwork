@@ -1,3 +1,26 @@
+"""
+y = a XOR b [The logic gate], this is the task done in this file
+This is a single linear layer which cannot solve XOR, hence we use a hidden layer.
+
+Network (2 -> 4 -> 1):
+    z1 = X @ W1 + b1            (N, 4) before activating, part of hidden layer
+    h = tanh(z1)                (N, 4) hidden activation
+    z2 = h @ W2 + b2            (N, 1) before activation output is given
+    p = sigmoid(z2)             (N, 1) probability of y = 1
+
+Loss: binary cross-entropy
+    L = -(1/N) * sum[y*log(p) + (1-y)*log(1-p)]
+
+Differentiation results written out
+    dL/dz2 = (p - y) / N            sigmoid + BCE simplification
+    dL/dW2 = h^T @ dL/dz2
+    dL/db2 = sum over batch of dL/dz2
+    dL/dh = dL/dx2 @ W2^T
+    dL/dz1 = dL/dh * (1 - tanh(z1)^2)
+    dL/dW1 = X^T @ dL/dz1
+    dL/db1 = sum over batch of dL/dz1
+"""
+
 import numpy as np
 rng = np.random.default_rng(0)
 
