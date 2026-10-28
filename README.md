@@ -1,4 +1,4 @@
-# Welcome to the repo! Thank you for being here <3.
+# ❤️ Welcome to the repo! Thank you for being here <3.
 
 # NeuralCar: a neural network that picks the car's heading
 
