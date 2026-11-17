@@ -32,7 +32,7 @@ The Serial Monitor (115200 baud) should show `NN self-test: ... OK`.
 3. Run `py capture.py COM5`, replace COM5 with your port.
 4. With USB plugged in, every 4s the car sweeps and saves one example.
    Keep moving it between sweeps (I have to move my laptop asw lol): walls, corners, chair legs, doorways, open floor, and different angles.
-5. Press Ctrl+C when done. I'm aiming for 300 or more sweeps (At 40 something right now).
+5. Press Ctrl+C when done. I'm aiming for 300 or more sweeps (At 130 something right now).
 
 Use a different file name per session, e.g. `py capture.py COM5 ../data/kitchen.csv`.
 `MODE_RULE` also logs while it drives, if you have a long cable.
